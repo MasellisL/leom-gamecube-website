@@ -1,10 +1,11 @@
 import React from 'react'
+import ReactDOM from 'react-dom'
 import 'bulma/css/bulma.css'
 import './App.css'
+import Main from './main.jsx'
 
-export default function App() {
-    return(
-  <main> 
-  
-  </main>
-)}
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <Main />
+  </React.StrictMode>,
+)

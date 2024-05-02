@@ -1,16 +1,21 @@
 import React from 'react'
 import './item-card.css'
-import Gamecube from './assets/control.jpg'
+import controller from './images/control.jpg'
 
-export default function Card() {
+
+export default function Card(props) {
+
     return(
-        <div className="item-card">
-            <img className="item" src={Gamecube} />
-            <div className="item-stats">
-            <p className="product-name">Emerald Gamecube Controller</p>
-            <p className="product-price">$50</p>
+        <div className="item-card-container">
+            <div className="item-card">
+                    <img src={props.img} className="item-img" />
+            
+                <div className="item-stats">
+                    <p className="product-name">{props.title}</p>
+                    <p className="product-price">{props.price}</p>
+                </div>
+                    <button className="cart-button">Add to Cart</button>
             </div>
-            <button className="cart-button">Add to Cart</button>
         </div>
     )
 }

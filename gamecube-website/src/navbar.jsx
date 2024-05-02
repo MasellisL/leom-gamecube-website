@@ -1,6 +1,5 @@
 import 'bulma/css/bulma.css'
-import './navbar.css'gi
-import Logo from './assets/logo.jpg'
+import Logo from './images/logo.jpg'
 
 
 export default function NavBar() {
@@ -27,11 +26,11 @@ export default function NavBar() {
       </a>
 
       <a className="navbar-item">
-        something
+        Controllers
       </a>
 
       <a className="navbar-item">
-        something
+        Mods
       </a>
 
     </div>

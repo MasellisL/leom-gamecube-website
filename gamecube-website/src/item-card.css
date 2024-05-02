@@ -7,23 +7,10 @@
     background-color: #E8EBE4;
 }
 
-.item{
-    border: 1px solid black;
-    width: 350px;
-}
-
-.product-name{
-    font-size: large;
-}
-
-.product-price{
-    font-size: large;
-}
-
-.item-stats{
+.cards-list{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .cart-button{
@@ -34,4 +21,8 @@
     border-radius: 10%;
 
 
+}
+
+.item-img{
+    width: 350px;
 }

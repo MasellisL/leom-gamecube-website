@@ -1,25 +1,28 @@
 import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.jsx'
 import NavBar from './navbar.jsx'
 import Card from './item-card.jsx'
-import './main.css'
+import items from './items.jsx'
+import "./item-card.css"
 
-ReactDOM.createRoot(document.getElementById('root')).render(
+export default function Main() {
+  
+  const cards= items.map(item => {
+    return(
+      <Card
+        img={item.img}
+        title={item.title}
+        price={item.price}
+        key={item.id}
+          />
+    )
+  })
+
+  return(
   <React.StrictMode>
-    <NavBar />
-  <section className="main">
-    <App />
+      <NavBar />
     <section className="cards-list">
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
-      <Card />
+      {cards}
     </section>
-  </section>
-  </React.StrictMode>,
-)
+  </React.StrictMode>
+  )
+}
