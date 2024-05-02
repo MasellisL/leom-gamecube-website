@@ -1,0 +1,9 @@
+
+.cards-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main{
+    background-color: #ee7a44;
+}

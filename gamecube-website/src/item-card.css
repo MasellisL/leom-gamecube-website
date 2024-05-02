@@ -1,0 +1,37 @@
+
+.item-card{
+    margin: 20px;
+    border: 1px solid black;
+    width: 350px;
+    height: 350px;
+    background-color: #E8EBE4;
+}
+
+.item{
+    border: 1px solid black;
+    width: 350px;
+}
+
+.product-name{
+    font-size: large;
+}
+
+.product-price{
+    font-size: large;
+}
+
+.item-stats{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cart-button{
+    background-color: #16697A;
+    font-size: small;
+    padding: 2px;
+    margin: 2px;
+    border-radius: 10%;
+
+
+}
