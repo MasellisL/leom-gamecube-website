@@ -1,5 +1,5 @@
 import 'bulma/css/bulma.css'
-import Logo from './images/logo.jpg'
+import Logo from '/images/logo.jpg'
 
 
 export default function NavBar() {
@@ -22,15 +22,21 @@ export default function NavBar() {
   <div id="navbarBasicExample" className="navbar-menu">
     <div className="navbar-start">
       <a className="navbar-item">
+        <a href="/">
         Home
+        </a>
       </a>
 
       <a className="navbar-item">
+        <a href="/controllers">
         Controllers
+        </a>
       </a>
 
       <a className="navbar-item">
+        <a href="/mods">
         Mods
+        </a>
       </a>
 
     </div>

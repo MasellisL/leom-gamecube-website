@@ -1,7 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import 'bulma/css/bulma.css'
-import './App.css'
 import Main from './main.jsx'
 
 ReactDOM.createRoot(document.getElementById('root')).render(

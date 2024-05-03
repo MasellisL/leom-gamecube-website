@@ -1,28 +1,31 @@
 import React from 'react'
+import Home from './pages/home.jsx'
+import Controllers from './pages/controllers.jsx'
+import Mods from './pages/mods.jsx'
 import NavBar from './navbar.jsx'
-import Card from './item-card.jsx'
-import items from './items.jsx'
 import "./item-card.css"
 
 export default function Main() {
-  
-  const cards= items.map(item => {
-    return(
-      <Card
-        img={item.img}
-        title={item.title}
-        price={item.price}
-        key={item.id}
-          />
-    )
-  })
+
+  let Component
+  switch (window.location.pathname) {
+      case "/":
+        Component = Home 
+        break
+      case "/controllers":
+        Component = Controllers
+        break
+      case "/mods":
+        Component = Mods
+        break
+  }
 
   return(
   <React.StrictMode>
       <NavBar />
-    <section className="cards-list">
-      {cards}
-    </section>
+      <section className="main">
+      <Component />
+      </section>
   </React.StrictMode>
   )
 }

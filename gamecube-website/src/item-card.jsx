@@ -1,7 +1,4 @@
-import React from 'react'
 import './item-card.css'
-import controller from './images/control.jpg'
-
 
 export default function Card(props) {
 
@@ -12,7 +9,7 @@ export default function Card(props) {
             
                 <div className="item-stats">
                     <p className="product-name">{props.title}</p>
-                    <p className="product-price">{props.price}</p>
+                    <p className="product-price">${props.price}</p>
                 </div>
                     <button className="cart-button">Add to Cart</button>
             </div>
