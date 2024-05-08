@@ -1,0 +1,25 @@
+
+.home-image{
+    width: 100%;
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+    border: 2px solid #e8ebe4;
+    border-radius: 3%;
+}
+
+.image-container{
+    display: flex;
+}
+
+.website-title{
+    margin-left: 50px;
+    color: #e8ebe4;
+    font-size: 100px;
+}
+
+.website-description{
+    margin-left: 75px;
+    color: #e8ebe4;
+    font-size: 35px;
+}
