@@ -1,6 +1,6 @@
 import './home.css'
-import Emerald from '../../public/images/emeraldgcc.jpg'
-import Modded from '../../public/images/moddedgcc.jpg'
+import Emerald from '/images/emeraldgcc.jpg'
+import Modded from '/images/moddedgcc.jpg'
 
 export default function Home() {
     return(
@@ -14,7 +14,6 @@ export default function Home() {
 
 
         <div>
-        <p className="website-title">GAMECUBE WEBSITE</p>
         <p className="website-description">
             Welcome to the website of Gamecube-website! <br></br>Here we sell pre-modded gamecube controllers, but we also offer a send in service <br></br> where we will mod your controller once you have shipped it to us!
         </p>

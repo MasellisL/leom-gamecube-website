@@ -3,7 +3,6 @@ import './item-card.css'
 export default function Card(props) {
 
     return(
-        <div className="item-card-container">
             <div className="item-card">
                     <img src={props.img} className="item-img" />
             
@@ -13,6 +12,5 @@ export default function Card(props) {
                 </div>
                     <button className="cart-button">Add to Cart</button>
             </div>
-        </div>
     )
 }

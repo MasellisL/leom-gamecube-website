@@ -3,6 +3,7 @@ import Home from './pages/home.jsx'
 import Controllers from './pages/controllers.jsx'
 import Cart from './pages/cart.jsx'
 import Mods from './pages/mods.jsx'
+import Contact from './pages/contact.jsx'
 import NavBar from './navbar.jsx'
 import "./item-card.css"
 
@@ -21,6 +22,9 @@ export default function Main() {
         break
       case "/cart":
         Component = Cart 
+        break
+      case "/contact":
+        Component = Contact
         break
   }
 

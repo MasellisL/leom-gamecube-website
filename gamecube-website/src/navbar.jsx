@@ -1,5 +1,6 @@
 import 'bulma/css/bulma.css'
 import './navbar.css'
+import Cart from '/images/cart.png'
 import Logo from '/images/logo.jpg'
 
 
@@ -22,6 +23,10 @@ export default function NavBar() {
 
   <div id="navbarBasicExample" className="navbar-menu">
     <div className="navbar-start">
+
+      <div className="navbar-item">
+        <div className="nav-title">GameSite</div>
+      </div>
       <a className="navbar-item">
         <a className="nav-button" href="/">
         Home
@@ -41,7 +46,7 @@ export default function NavBar() {
       </a>
 
       <a className="navbar-item">
-        <a className="nav-button" href="/contact us">
+        <a className="nav-button" href="/contact">
         Contact Us
         </a>
       </a>
@@ -51,7 +56,7 @@ export default function NavBar() {
     <div className="navbar-end">
       <div className="navbar-item">
             <a className="nav-button" href="/cart">
-              Cart
+              <img src={Cart}></img>
             </a>
       </div>
     </div>
