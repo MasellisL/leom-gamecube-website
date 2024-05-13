@@ -1,0 +1,24 @@
+
+.contact-box-container{
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+
+
+}
+.contact-box{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 100px;
+    border: 1px solid black;
+    border-radius: 5px;
+    width: 350px;
+    height: 250px;
+    background-color: #e8ebe4;
+
+}
+
+.contact-name{
+    font-size: 50px;
+}
