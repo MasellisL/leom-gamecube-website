@@ -3,6 +3,13 @@ import items from '../items.jsx'
 export default function Controllers() {
 
     const itemCards = items.map(item => {
+
+      const [cart, setCart] = React.useState({
+                  img: {},
+                  title: {},
+                  price: {},
+                  key: {}
+      })
         return(
           <Card
             img={item.img}
