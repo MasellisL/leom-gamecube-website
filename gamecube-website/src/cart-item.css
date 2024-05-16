@@ -1,8 +1,7 @@
 
 .cart-items-container{
     background-color: white;
-    width: 60%;
-    height: 100%;
+    max-width: 700px;
     border-bottom: 1px solid gray;
 }
 .cart-item-info{

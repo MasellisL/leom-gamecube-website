@@ -8,11 +8,32 @@ export default function Cart(props) {
     const [cart, setCart] = React.useState([{
         img: "/images/control.jpg",
         title: "emerald gamecube controller",
-        price: "$50",
+        price: 50,
         id: "1"
-    }]);
+    },
+    {
+      img: "/images/control.jpg",
+        title: "emerald gamecube controller",
+        price: 50,
+        id: "2"
+    }
+  ]);
 
-    const cartItems = cart.map(item => {
+    const [total, setTotal] = React.useState(cart.price)
+
+    // Function to update the total price
+    const calculateTotal = () => {
+      const prices = cart.map(item => item.price);
+      const totalPrice = prices.reduce((acc, curr) => acc + curr, 0);
+      setTotal(totalPrice);
+    };
+
+    // Use useEffect to recalculate the total whenever the cart changes
+  React.useEffect(() => {
+    calculateTotal();
+  }, [cart]);
+  
+    const cartItem = cart.map(item => {
         return(
           <CartItem
             img={item.img}
@@ -24,11 +45,15 @@ export default function Cart(props) {
       })
 
     return(
-          <main>
+          <main className="cart-main">
             <div className="cart-items">
-              {cartItems}
-              {cartItems}
-              {cartItems}
+              {cartItem}
+            </div>
+            <div className="payment-container">
+            <p className="total">Total: ${total}</p>
+            <button className="payment-button">PAYPAL</button>
+            <button className="payment-button">VENMO</button>
+            <button className="payment-button">DEBIT OR CREDIT</button>
             </div>
           </main>
     )

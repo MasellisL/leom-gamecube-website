@@ -2,7 +2,7 @@ import 'bulma/css/bulma.css';
 import './navbar.css';
 import Cart from '/images/cart.png';
 import Logo from '/images/logo.jpg';
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export default function NavBar() {
   const [isActive, setIsActive] = useState(false);

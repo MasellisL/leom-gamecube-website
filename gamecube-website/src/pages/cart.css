@@ -1,5 +1,34 @@
-
+.cart-main{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
 .cart-items{
+    flex: 6;
     margin-left: 20px;
     margin-bottom: 10px;
+}
+
+.payment-container{
+    flex: 0.5;
+    display: flex;
+    flex-direction: column;
+    padding-right: 100px;
+    padding-top: 50px;
+    padding-left: 25px;
+}
+
+.payment-button{
+    border: 1px solid black;
+    color: black;
+    width:100px;
+    height:50px;
+    background-color: white;
+    margin: 3px;
+}
+
+.total{
+    color: black;
+    background-color: white;
+    border: 1px solid black;
 }

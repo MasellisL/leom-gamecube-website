@@ -7,8 +7,8 @@ export default function Home() {
       <main>
 <div className="image-container">
     
-            <img src={Emerald} className="home-image"></img>
-            <img src={Modded} className="home-image"></img>
+        <a href="/controllers"> <img src={Emerald} className="home-image"></img> </a>
+        <a href="/mods">         <img src={Modded} className="home-image"></img> </a>
 
         </div>
 
