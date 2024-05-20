@@ -46,8 +46,10 @@ export default function Cart(props) {
 
     return(
           <main className="cart-main">
+            <div className="cart-items-container">
             <div className="cart-items">
               {cartItem}
+            </div>
             </div>
             <div className="payment-container">
             <p className="total">Total: ${total}</p>

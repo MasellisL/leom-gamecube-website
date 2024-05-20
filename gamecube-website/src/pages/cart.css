@@ -5,8 +5,10 @@
 }
 .cart-items{
     flex: 6;
-    margin-left: 20px;
+    margin-left: 60px;
     margin-bottom: 10px;
+    width: 600px;
+    height: 500px;
 }
 
 .payment-container{
@@ -32,3 +34,32 @@
     background-color: white;
     border: 1px solid black;
 }
+
+@media (max-width: 768px) {
+    .cart-main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cart-items {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .payment-container {
+        width: 100%;
+        padding: 0;
+        align-items: center;
+    }
+
+    .payment-button {
+        width: 80%;
+        max-width: 200px;
+    }
+
+    .total {
+        width: 80%;
+        max-width: 150px;
+        text-align: center;
+    }
+  }

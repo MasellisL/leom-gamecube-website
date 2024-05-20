@@ -4,6 +4,9 @@ export default [
         img: "/images/cable.jpg",
         title: "Braided Cable",
         price: "25",
+        description: "this is a braided cable",
+        href: "/braided-cable"
+
     },
     {
         id: 2,

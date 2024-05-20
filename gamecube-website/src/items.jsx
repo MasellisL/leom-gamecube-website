@@ -7,6 +7,8 @@ export default[
         img: "/images/control.jpg",
         title: "Emerald Gamecube Controller",
         price: "50",
+        description: "this is an Emerald gamecube controller",
+        href: "/Emerald-Gamecube-Controller"
     },
     {
         id: 2,
