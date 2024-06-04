@@ -6,7 +6,6 @@ import Mods from './pages/mods.jsx'
 import Contact from './pages/contact.jsx'
 import NavBar from './navbar.jsx'
 import Clicked from './pages/clicked.jsx'
-import { ClickedItemProvider } from './pages/clicked-item-context.jsx'
 import "./item-card.css"
 
 export default function Main() {
@@ -36,14 +35,22 @@ export default function Main() {
         break
   }
 
+  const [clickedItem, setClickedItem] = React.useState(null)
+
+    const handleCardClick = (item) => {
+    console.log('Card clicked:', item);
+    setClickedItem(item);
+    window.location.pathname = '/clicked'
+  };
+
+console.log('Clicked item:', clickedItem);
+
   return(
   <React.StrictMode>
-    <ClickedItemProvider>
       <NavBar />
       <section className="main">
-      <Component />
-      </section>
-    </ClickedItemProvider>  
+      <Component handleCardClick={() => handleCardClick(clickedItem)} />
+      </section> 
   </React.StrictMode>
-  )
+    )
 }

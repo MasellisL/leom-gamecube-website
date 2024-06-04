@@ -1,21 +1,18 @@
-import React, { useContext } from 'react';
-import { ClickedItemContext } from './clicked-item-context.jsx'
 
-export default function Clicked() {
-    const { clickedItem } = useContext(ClickedItemContext);
+export default function Clicked(props) {
 
-    console.log('Clicked item:', clickedItem); // Log the clicked item
+    console.log('Clicked item:', props.clickedItem); // Log the clicked item
 
-    if (!clickedItem) {
+    if (!props.clickedItem) {
         return <p>No item selected.</p>;
       }
 
     return(
     <div>
-            <img src={clickedItem.img} alt={clickedItem.title} />
-            <h1>{clickedItem.title}</h1>
-            <p>{clickedItem.description}</p>
-            <p>${clickedItem.price}</p>
+            <img src={props.clickedItem.img} alt={props.clickedItem.title} />
+            <h1>{props.clickedItem.title}</h1>
+            <p>{props.clickedItem.description}</p>
+            <p>${props.clickedItem.price}</p>
     </div>
     )
 }
