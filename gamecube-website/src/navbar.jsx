@@ -1,11 +1,12 @@
+import React from 'react';
+import { Link } from 'react-router-dom';
 import 'bulma/css/bulma.css';
 import './navbar.css';
 import Cart from '/images/cart.png';
 import Logo from '/images/logo.jpg';
-import { useState } from 'react';
 
 export default function NavBar() {
-  const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = React.useState(false);
 
   const toggleMenu = () => {
     setIsActive(!isActive);
@@ -35,24 +36,24 @@ export default function NavBar() {
 
         <div id="navbarBasicExample" className={`navbar-menu ${isActive ? 'is-active' : ''}`}>
           <div className="navbar-start">
-            <a className="navbar-item nav-button" href="/">
+            <Link className="navbar-item nav-button" to="/">
               Home
-            </a>
-            <a className="navbar-item nav-button" href="/controllers">
+            </Link>
+            <Link className="navbar-item nav-button" to="/controllers">
               Controllers
-            </a>
-            <a className="navbar-item nav-button" href="/mods">
+            </Link>
+            <Link className="navbar-item nav-button" to="/mods">
               Mods
-            </a>
-            <a className="navbar-item nav-button" href="/contact">
+            </Link>
+            <Link className="navbar-item nav-button" to="/contact">
               Contact Us
-            </a>
+            </Link>
           </div>
           <div className="navbar-end">
             <div className="navbar-item">
-              <a className="nav-button" href="/cart">
+              <Link className="nav-button" to="/cart">
                 <img src={Cart} alt="Cart" />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

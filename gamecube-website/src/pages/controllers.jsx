@@ -1,24 +1,20 @@
 import Card from '../item-card.jsx';
 import items from '../items.jsx';
 
-export default function Controllers(props) {
+export default function Controllers({ handleCardClick }) {
+  const itemCards = items.map(item => (
+    <Card
+      img={item.img}
+      title={item.title}
+      price={item.price}
+      key={item.id}
+      onClick={() => handleCardClick(item)}
+    />
+  ));
 
-    const itemCards = items.map(item => {
-
-        return(
-          <Card
-            img={item.img}
-            title={item.title}
-            price={item.price}
-            key={item.id}
-            onClick={props.handleCardClick}
-              />
-        )
-      })
-
-    return(
-        <section className="cards-list">
-        {itemCards}
-        </section>
-    )
+  return (
+    <section className="cards-list">
+      {itemCards}
+    </section>
+  );
 }

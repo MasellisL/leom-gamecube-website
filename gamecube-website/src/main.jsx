@@ -1,56 +1,47 @@
-import React from 'react'
-import Home from './pages/home.jsx'
-import Controllers from './pages/controllers.jsx'
-import Cart from './pages/cart.jsx'
-import Mods from './pages/mods.jsx'
-import Contact from './pages/contact.jsx'
-import NavBar from './navbar.jsx'
-import Clicked from './pages/clicked.jsx'
-import "./item-card.css"
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route, useNavigate } from 'react-router-dom';
+import Home from './pages/home.jsx';
+import Controllers from './pages/controllers.jsx';
+import Cart from './pages/cart.jsx';
+import Mods from './pages/mods.jsx';
+import Contact from './pages/contact.jsx';
+import NavBar from './navbar.jsx';
+import Clicked from './pages/clicked.jsx';
+import "./item-card.css";
 
-export default function Main() {
+function MainContent() {
+  const [clickedItem, setClickedItem] = React.useState(null);
+  const navigate = useNavigate();
 
-  let Component
-  switch (window.location.pathname) {
-      case "/":
-        Component = Home 
-        break
-      case "/controllers":
-        Component = Controllers
-        break
-      case "/mods":
-        Component = Mods
-        break
-      case "/cart":
-        Component = Cart 
-        break
-      case "/contact":
-        Component = Contact
-        break
-      case "/clicked":
-        Component = Clicked
-        break
-      default:
-        Component = Home;
-        break
-  }
-
-  const [clickedItem, setClickedItem] = React.useState(null)
-
-    const handleCardClick = (item) => {
-    console.log('Card clicked:', item);
+  const handleCardClick = (item) => {
     setClickedItem(item);
-    window.location.pathname = '/clicked'
+    navigate('/clicked');
   };
 
-console.log('Clicked item:', clickedItem);
-
-  return(
-  <React.StrictMode>
+  return (
+    <>
       <NavBar />
       <section className="main">
-      <Component handleCardClick={() => handleCardClick(clickedItem)} />
-      </section> 
-  </React.StrictMode>
-    )
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/controllers" element={<Controllers handleCardClick={handleCardClick} />} />
+          <Route path="/mods" element={<Mods />} />
+          <Route path="/cart" element={<Cart />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/clicked" element={<Clicked clickedItem={clickedItem} />} />
+          <Route path="*" element={<Home />} />
+        </Routes>
+      </section>
+    </>
+  );
+}
+
+export default function Main() {
+  return (
+    <React.StrictMode>
+      <Router>
+        <MainContent />
+      </Router>
+    </React.StrictMode>
+  );
 }
