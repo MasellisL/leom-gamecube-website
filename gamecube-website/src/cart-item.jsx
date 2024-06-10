@@ -1,6 +1,7 @@
 import "./cart-item.css"
 
 export default function CartItem(props) {
+  console.log(props)
     return(
     <main className="cart-main">
     <div className="cart-items-container">
@@ -10,6 +11,7 @@ export default function CartItem(props) {
         </div>   
         <p>{props.title}</p>
         <p>{props.price}</p>
+        <button className="remove-button">Remove</button>
       </div>
     </div>
     </main>

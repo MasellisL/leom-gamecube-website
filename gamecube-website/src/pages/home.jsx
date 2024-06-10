@@ -1,4 +1,5 @@
 import './home.css'
+import { Link } from 'react-router-dom';
 import Emerald from '/images/emeraldgcc.jpg'
 import Modded from '/images/moddedgcc.jpg'
 
@@ -6,9 +7,9 @@ export default function Home() {
     return(
       <main>
 <div className="image-container">
-    
-        <a href="/controllers"> <img src={Emerald} className="home-image"></img> </a>
-        <a href="/mods">         <img src={Modded} className="home-image"></img> </a>
+  
+        <Link to="/controllers"> <img src={Emerald} className="home-image"></img> </Link>
+        <Link to="/mods">        <img src={Modded} className="home-image"></img> </Link>
 
         </div>
 

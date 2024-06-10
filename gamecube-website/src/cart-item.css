@@ -23,3 +23,14 @@
     margin-top: 10px;
     min-width: 60px;
 }
+
+.remove-button{
+    display: flex;
+    border: 1px solid black;
+    height: 40px;
+    background-color: #776677;
+    border-radius: 5%;
+    margin-left: 70%;
+    margin-top: 40px;
+
+}

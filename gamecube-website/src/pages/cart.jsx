@@ -1,45 +1,31 @@
 import "./cart.css"
-import React, { useState } from 'react'
+import React from 'react'
 import "/images/control.jpg"
 import CartItem from "../cart-item.jsx"
 
 export default function Cart(props) {
 
-    const [cart, setCart] = React.useState([{
-        img: "/images/control.jpg",
-        title: "emerald gamecube controller",
-        price: 50,
-        id: "1"
-    },
-    {
-      img: "/images/control.jpg",
-        title: "emerald gamecube controller",
-        price: 50,
-        id: "2"
-    }
-  ]);
-
-    const [total, setTotal] = React.useState(cart.price)
+    const [total, setTotal] = React.useState(props.cart.price)
 
     // Function to update the total price
     const calculateTotal = () => {
-      const prices = cart.map(item => item.price);
+      const prices = props.cart.map(item => item.price);
       const totalPrice = prices.reduce((acc, curr) => acc + curr, 0);
       setTotal(totalPrice);
     };
 
-    // Use useEffect to recalculate the total whenever the cart changes
   React.useEffect(() => {
     calculateTotal();
-  }, [cart]);
+  }, [props.cart]);
   
-    const cartItem = cart.map(item => {
+    const cartItem = props.cart.map(item => {
         return(
           <CartItem
             img={item.img}
             title={item.title}
             price={item.price}
             id={item.id}
+            key={item.id}
               />
         )
       })

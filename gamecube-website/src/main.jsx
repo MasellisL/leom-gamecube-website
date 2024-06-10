@@ -10,6 +10,9 @@ import Clicked from './pages/clicked.jsx';
 import "./item-card.css";
 
 function MainContent() {
+
+  const [cart, setCart] = React.useState([])
+  
   const [clickedItem, setClickedItem] = React.useState(null);
   const navigate = useNavigate();
 
@@ -25,10 +28,10 @@ function MainContent() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/controllers" element={<Controllers handleCardClick={handleCardClick} />} />
-          <Route path="/mods" element={<Mods />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route path="/mods" element={<Mods handleCardClick={handleCardClick} />} />
+          <Route path="/cart" element={<Cart  setCart={setCart} cart={cart} clickedItem={clickedItem} />} />
           <Route path="/contact" element={<Contact />} />
-          <Route path="/clicked" element={<Clicked clickedItem={clickedItem} />} />
+          <Route path="/clicked" element={<Clicked cart={cart} setCart={setCart} clickedItem={clickedItem} />} />
           <Route path="*" element={<Home />} />
         </Routes>
       </section>
