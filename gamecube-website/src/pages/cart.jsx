@@ -1,7 +1,7 @@
 import "./cart.css"
 import React from 'react'
 import "/images/control.jpg"
-import CartItem from "../cart-item.jsx"
+import CartItem from "../components/cart-item.jsx"
 
 export default function Cart(props) {
 
@@ -26,6 +26,7 @@ export default function Cart(props) {
             price={item.price}
             id={item.id}
             key={item.id}
+            removeItem={() => props.removeItem(item.id)}
               />
         )
       })

@@ -2,13 +2,16 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    margin-left: 20px;
 }
 .cart-items{
     flex: 6;
-    margin-left: 60px;
+    margin-left: 30px;
     margin-bottom: 10px;
     width: 600px;
     height: 500px;
+    background-color: white;
+    overflow-y: auto;
 }
 
 .payment-container{

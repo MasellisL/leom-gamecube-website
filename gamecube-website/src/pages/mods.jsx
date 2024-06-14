@@ -1,4 +1,4 @@
-import Card from '../item-card.jsx'
+import Card from '../components/item-card.jsx'
 import mods from '../mods.jsx'
 
 export default function Mods({ handleCardClick }) {

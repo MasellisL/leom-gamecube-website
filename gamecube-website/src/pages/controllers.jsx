@@ -1,7 +1,8 @@
-import Card from '../item-card.jsx';
-import items from '../items.jsx';
+import Card from '../components/item-card.jsx';
+import items from '../items.jsx'
 
 export default function Controllers({ handleCardClick }) {
+
   const itemCards = items.map(item => (
     <Card
       img={item.img}

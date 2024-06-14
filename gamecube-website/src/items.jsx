@@ -1,9 +1,8 @@
+export default
 
-export default[
-
-    //controllers
+[
     {
-        id: 1,
+        id: "1",
         img: "/images/moddedgcc.jpg",
         title: "Emerald Gamecube Controller",
         price: 50,
@@ -36,6 +35,18 @@ export default[
     },
     {
         id: 6,
+        img: "/images/control.jpg",
+        title: "Emerald Gamecube Controller",
+        price: 50,
+    },
+    {
+        id: 7,
+        img: "/images/control.jpg",
+        title: "Emerald Gamecube Controller",
+        price: 50,
+    },
+    {
+        id: 8,
         img: "/images/control.jpg",
         title: "Emerald Gamecube Controller",
         price: 50,

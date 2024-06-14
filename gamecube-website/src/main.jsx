@@ -7,7 +7,6 @@ import Mods from './pages/mods.jsx';
 import Contact from './pages/contact.jsx';
 import NavBar from './navbar.jsx';
 import Clicked from './pages/clicked.jsx';
-import "./item-card.css";
 
 function MainContent() {
 
@@ -21,6 +20,13 @@ function MainContent() {
     navigate('/clicked');
   };
 
+  const removeItem = (id) => {
+    console.log(cart)
+    const newCart = cart.filter((item) => item.id !== id);
+    setCart(newCart);
+
+  }
+
   return (
     <>
       <NavBar />
@@ -29,7 +35,7 @@ function MainContent() {
           <Route path="/" element={<Home />} />
           <Route path="/controllers" element={<Controllers handleCardClick={handleCardClick} />} />
           <Route path="/mods" element={<Mods handleCardClick={handleCardClick} />} />
-          <Route path="/cart" element={<Cart  setCart={setCart} cart={cart} clickedItem={clickedItem} />} />
+          <Route path="/cart" element={<Cart  setCart={setCart} cart={cart} clickedItem={clickedItem} removeItem={removeItem} />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/clicked" element={<Clicked cart={cart} setCart={setCart} clickedItem={clickedItem} />} />
           <Route path="*" element={<Home />} />

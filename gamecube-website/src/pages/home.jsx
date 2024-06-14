@@ -1,7 +1,7 @@
 import './home.css'
 import { Link } from 'react-router-dom';
-import Emerald from '/images/emeraldgcc.jpg'
-import Modded from '/images/moddedgcc.jpg'
+import Emerald from '/images/emeraldgcc.jpeg'
+import Modded from '/images/moddedgcc.jpeg'
 
 export default function Home() {
     return(

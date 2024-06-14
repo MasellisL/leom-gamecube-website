@@ -1,18 +1,34 @@
 import "./clicked.css"
+import React from 'react'
+
 export default function Clicked(props) {
+  const [message, setMessage] = React.useState('');
 
     if (!props.clickedItem) {
         return <p>No item selected.</p>;
       }
 
-      const addToCart = () => {
-        props.setCart(prevCart => [...prevCart, props.clickedItem])
-        console.log(props.cart);
+      function getUID() {
+        return Date.now().toString(36);
       }
+      let timeStamp = getUID();
+      const addToCart = () => {
+        delete props.clickedItem.id;
+        const newClickedItem = {
+          ...props.clickedItem,
+          id: timeStamp
+        }
+        props.setCart(prevCart => [...prevCart, newClickedItem])
+        setMessage('Item Added');
+        setTimeout(() => {
+          setMessage('');
+        }, 3000);
+      };
       
 
     return(
     <div className="clicked-page">
+      {message && <div className="notification">{message}</div>}
       <div className="clicked-item-container">
             <div className="clicked-img-container">
               <img className="clicked-img" src={props.clickedItem.img} alt={props.clickedItem.title} />
