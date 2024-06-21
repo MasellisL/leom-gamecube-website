@@ -1,16 +1,25 @@
 
-.home-image{
-    width: 500px;
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-right: 50px;
+
+.home-image-left{
+    max-width: 500px;
     border: 2px solid #e8ebe4;
     border-radius: 3%;
+    margin-left: 20px;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.home-image-right{
+    max-width: 500px;
+    border: 2px solid #e8ebe4;
+    border-radius: 3%;
+    margin-left: 10px;
+    margin-top: 20px;
 }
 
 .image-container{
     display: flex;
-    justify-content: center;;
+    justify-content: center;
 }
 
 .website-description{
@@ -24,4 +33,19 @@
     color: #e8ebe4;
     font-size: 25px;
     background-color: #776677;
+}
+
+@media (max-width: 1042px) {
+    .home-image-left,
+    .home-image-right {
+        max-width: 90%;
+    }
+
+    .image-container {
+        justify-content: center;
+    }
+
+    .website-description {
+        font-size: 20px;
+    }
 }

@@ -7,16 +7,14 @@ export default function Cart(props) {
 
     const [total, setTotal] = React.useState(props.cart.price)
 
-    // Function to update the total price
-    const calculateTotal = () => {
-      const prices = props.cart.map(item => item.price);
-      const totalPrice = prices.reduce((acc, curr) => acc + curr, 0);
+  React.useEffect(() => {
+      const calculateTotal = () => {
+          const prices = props.cart.map(item => item.price);
+          const totalPrice = prices.reduce((acc, curr) => acc + curr, 0);
       setTotal(totalPrice);
     };
-
-  React.useEffect(() => {
     calculateTotal();
-  }, [props.cart]);
+  }, [props.cart,]);
   
     const cartItem = props.cart.map(item => {
         return(

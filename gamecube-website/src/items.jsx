@@ -51,4 +51,12 @@ export default
         title: "Emerald Gamecube Controller",
         price: 50,
     },
+    {
+        id: "9",
+        img: "/images/moddedgcc.jpg",
+        title: "Emerald Gamecube Controller",
+        price: 50,
+        description: "this is an Emerald gamecube controller with snapback capacitor, super duper slam stick, crazy buttons, and was crafted by the gods themselves.",
+        href: "/Emerald-Gamecube-Controller"
+    },
 ]

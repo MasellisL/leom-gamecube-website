@@ -39,6 +39,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: #EE7A44;
   }
   
   @media (max-width: 768px) {

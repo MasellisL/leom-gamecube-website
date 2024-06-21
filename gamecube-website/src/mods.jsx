@@ -2,7 +2,7 @@ export default [
     {
         id: 1,
         img: "/images/cable.jpg",
-        title: "Emerald Gamecube Controller",
+        title: "Braided Cable",
         price: 25,
         description: "this is a braided cable",
         href: "/braided-cable"
@@ -46,6 +46,12 @@ export default [
     },
     {
         id: 8,
+        img: "/images/cable.jpg",
+        title: "Braided Cable",
+        price: 25,
+    },
+    {
+        id: 9,
         img: "/images/cable.jpg",
         title: "Braided Cable",
         price: 25,
